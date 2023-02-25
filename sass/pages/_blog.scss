@@ -107,16 +107,16 @@
 
 @media only screen and (max-width: 650px) {
     .blog{
-        padding: 2rem;
+        padding: 1rem 2rem;
         .blog-container{
             @include grid('1fr',' ');
             gap: 4rem;
             .title{
                 h2{
-                    font-size: 1.6rem;
+                    font-size: 1.6rem ;
                 }
                 p{
-                    font-size: 1.4rem;
+                    font-size: 1.4rem ;
                 }
             }
 

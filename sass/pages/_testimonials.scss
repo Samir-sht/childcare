@@ -135,6 +135,7 @@
 @media only screen and (max-width: 650px) {
    
     .testimonials{
+        margin: 3rem 0;
         .container{
           padding: 4rem 2rem 4rem 2rem;
             
@@ -163,11 +164,11 @@
 
                     .card1{
                         p{
-                            font-size: 1.4rem;
+                            font-size: 1.4rem ;
                         }
 
                         h5{
-                            font-size: 1.6rem;
+                            font-size: 1.6rem !important;
                         }
 
                     }
