@@ -24,42 +24,47 @@
           <h2><a href="#">Child Care</a></h2>
         </div>
         <ul class="nav-links">
-          <li class="items">
+          <li class="items" id="works">
             <a href=""
               >our work <span><i class="fa-solid fa-angle-down"></i></span>
             </a>
 
-            <ul class="sub-menu">
+            <ul class="sub-menu" id="items">
               <li><a href="">frt programs</a></li>
               <li><a href=""> logo program</a></li>
               <li><a href=""> publications</a></li>
             </ul>
           </li>
 
-          <li class="items">
+          <li class="items" id="works">
             <a href=""
               >about us <span> <i class="fa-solid fa-angle-down"></i></span
             ></a>
-            <ul class="sub-menu">
+            <ul class="sub-menu" id="items">
               <li><a href="">Our Founder</a></li>
               <li><a href="">Executive Committee</a></li>
               <li><a href="">Staff</a></li>
               <li><a href="">partners</a></li>
             </ul>
           </li>
-          <li class="items">
+          <li class="items" id="works">
             <a href=""
               >get involved <span> <i class="fa-solid fa-angle-down"></i></span
             ></a>
-            <ul class="sub-menu">
+            <ul class="sub-menu" id="items">
               <li><a href="">stories</a></li>
               <li><a href="">work with us</a></li>
               <li><a href="">contact us</a></li>
             </ul>
           </li>
         </ul>
+        <div class="hamburger">
+          <i class="fa-solid fa-bars"></i>
+        </div>
       </nav>
+      <!--end of navbar-->
 
+      <!--slider -->
       <div class="swiper">
         <div class="swiper-wrapper">
           <!-- Slide 1 -->
@@ -109,9 +114,11 @@
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
       </div>
+      <!--end of slider-->
     </header>
 
     <main>
+      <!--about us -->
       <section class="about-us">
         <div class="about-description">
           <h3>our stories</h3>
@@ -127,7 +134,9 @@
           <img src="images/image2.jpg" alt="about-img" />
         </div>
       </section>
+      <!--end of about us-->
 
+      <!--programs-->
       <section class="works">
         <h3>
           Child care programs provides a variety of activities that are tailored
@@ -153,7 +162,62 @@
           </div>
         </div>
       </section>
+      <!--end of program section-->
 
+      <!--testimonials section-->
+      <section class="testimonials">
+        <div class="container">
+          <div class="stories">
+            <h3>our stories</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+              vel lacus vel ligula cursus vulputate et eget est. Nullam at nulla
+              neque. Proin sed dignissim ipsum. Ut faucibus dictum mi, ac
+              tristique elit consequat a.Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit.
+            </p>
+            <button>
+              <a href="#"
+                >explore all <span><i class="fa-solid fa-arrow-right"></i></span
+              ></a>
+            </button>
+          </div>
+          <div class="review">
+            <div class="slider">
+              <div class="card1">
+                <figure>
+                  <img src="images/image1.jpg" alt="image1" />
+                </figure>
+                <article>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna al.
+                  </p>
+                  <h5>rajshree deuja</h5>
+                  <h6>student of csit</h6>
+                </article>
+              </div>
+
+              <div class="card1 card2">
+                <figure>
+                  <img src="images/image1.jpg" alt="image1" />
+                </figure>
+                <article>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna al.
+                  </p>
+                  <h5>rajshree deuja</h5>
+                  <h6>student of csit</h6>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--end of testomonials section-->
+
+      <!--blog section-->
       <section class="blog">
         <div class="title">
           <h2>our blog</h2>
@@ -197,7 +261,9 @@
           </div>
         </div>
       </section>
+      <!--end of blog section-->
     </main>
+    <!--newsletter section -->
     <section class="newsletter">
       <div class="social-media">
         <h2>follow #Child Care</h2>
@@ -216,11 +282,15 @@
             name="email"
             placeholder="please enter email address"
           />
-          <i class="fa-solid fa-arrow-right"></i>
+          <button><i class="fa-solid fa-arrow-right"></i></button>
         </form>
         <p>Read Terms and Conditions</p>
       </div>
     </section>
+
+    <!--end of newsletter section-->
+
+    <!--footer-->
     <footer>
       <section class="container">
         <div class="links-items">
@@ -278,6 +348,7 @@
         Copyright&copychildcare.com. All Rights Reserved
       </h2>
     </footer>
+    <!--end of footer-->
     <script src="./swiper/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>
   </body>

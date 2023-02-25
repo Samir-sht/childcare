@@ -36,3 +36,39 @@ main{
     }
 }
 }
+
+//media query
+@media only screen and (max-width: 850px) {
+    main{
+        padding: 0;
+        .about-us{
+            @include grid('1fr',' ');
+
+            .about-description{
+                width: 100%;
+            }
+
+            .about-img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:650px){
+    main{
+        .about-us{
+        padding: 4rem;
+    .about-description{
+        width: 100%;
+
+        h3{
+            font-size: 1.6rem;
+        }
+        p{
+            font-size: 1.4rem
+        };
+    }
+}
+    }
+}

@@ -3,8 +3,8 @@
     width: 100%;
     background-color: $primary_color;
 
-    @include grid('2fr 1fr',' ');
-    align-self: center;
+    @include grid('2fr 1fr','');
+    align-items: center;
     justify-self: center;
     color: $clr_white;
 
@@ -38,29 +38,85 @@
         form{
             margin-bottom: 1rem;
             position: relative;
-            input{
+            input[type="email"]{
                 width: 100%;
                 border:none;
                 outline: none;
                 border-bottom: 2px solid $clr_white;
                 background: transparent;
-               
+                outline: none;
+                color: $clr_white;
                 
             }
             input::placeholder{
                 text-transform: uppercase;
                 color: $clr_white;
             }
-            i{
+            button{
+                background-color: transparent;
                 position: absolute;
                 display: block;
                 font-size: 1.6rem;
                 right: 0%;
                 top: 0;
+                border: none;
+                outline: none;
+
+                i{
+                    color: $clr_white;
+                }
             }
+
+            &:hover{
+                border-radius: 2rem;
+            }
+
         }
         p{
             font-size: 1.2rem;
+        }
+    }
+}
+
+//media query
+@media only screen and (max-width: 850px) {
+    .newsletter{
+        @include grid('1fr',' ');
+
+        .social-media{
+            padding:4rem 4rem;
+            border-right: 0;
+            border-bottom: 1px solid $clr_white;
+        }
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .newsletter{
+      
+
+        .social-media{
+            padding:4rem 4rem;
+            border-right: 0;
+            border-bottom: 1px solid $clr_white;
+
+            h2{
+                font-size: 1.6rem;
+            }
+
+            .icons{
+            i{
+                font-size: 1.6rem;
+            }
+        }
+        }
+
+        .resources{
+            h2{
+                font-size: 1.6rem;
+            }
+
+            
         }
     }
 }

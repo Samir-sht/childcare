@@ -106,3 +106,55 @@ footer{
             background-color: $primary_color;
         }
     }
+
+
+//media query
+@media only screen and (max-width: 850px) {
+    footer{
+        .container{
+            @include grid('1fr',' ');
+            gap: 2rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    footer{
+       .container{
+        margin: 0;
+        padding:3rem;
+
+        .links-items{
+            .links{
+                
+                    h2{
+                        font-size: 1rem;
+                    }
+                    ul{
+                        li{
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+
+            .site-visit{
+                h4{
+                    font-size: 1.4rem;
+                    margin-bottom: 0.8rem;
+                }
+                p{
+                    font-size: 1.8rem;
+                }
+            }
+      
+        }
+
+        
+       }
+
+       .contact-details{
+            flex-direction: column;
+       }
+    
+}

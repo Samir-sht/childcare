@@ -1,5 +1,5 @@
 .works{
- 
+  
     margin: 5rem 0rem;
     h3{
         text-transform: uppercase;
@@ -124,6 +124,35 @@
             h5{
                 margin-top: 1.6rem;
             }
+        }
+    }
+}
+
+//media query
+@media only screen and (max-width: 850px) {
+    .works{
+        margin: 0;
+        padding: 0 4rem;
+        h3{
+            font-size: 1.6rem;
+        }
+        .container{
+            @include grid('1fr 1fr','1fr 1fr');
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .works{
+        margin: 0;
+        padding: 0 4rem;
+       
+        .container{
+            @include grid('1fr' ,' ');
+            place-items: center;
+            row-gap: 2rem;
         }
     }
 }

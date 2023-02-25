@@ -51,8 +51,9 @@
             h3{
                 margin-top: 1rem;
                 font-size: 2rem;
-                font-weight: $font_semibold;
+                font-weight: $font_medium;
                 margin-bottom: 1rem;
+                color: $secondary_color;
             }
             p{
                 font-size: 1.6rem;
@@ -87,5 +88,32 @@
         }
 
        
+    }
+}
+
+//media query
+@media only screen and (max-width: 850px) {
+    .blog{
+        .blog-container{
+            @include grid('1fr 1fr',' ');
+            gap: 4rem;
+
+            .blog1{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .blog{
+        .blog-container{
+            @include grid('1fr',' ');
+            gap: 4rem;
+
+            .blog1{
+                width: 100%;
+            }
+        }
     }
 }
