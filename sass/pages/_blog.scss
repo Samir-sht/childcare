@@ -1,0 +1,91 @@
+.blog{
+    width: 100%;
+    padding: 4rem;
+    // margin: 5rem 0;
+  
+
+    .title{
+        @include css-flexbox(space-between,center);
+        h2{
+            font-size: 2.4rem;
+            font-weight: $font_semibold;
+            text-transform: uppercase;
+            color: $secondary_color;
+         
+        }
+        p{
+            text-transform: uppercase;
+            font-size: 1.6rem;
+            color: $clr_grey_light;
+
+            span{
+                .fa-solid{
+                margin-left: 0.5rem;
+               }
+            }
+        }
+    }
+
+ 
+    .blog-container{
+        width: 100%;
+        @include css-flexbox(flex-start,center);
+        gap: 6rem;
+        margin-top: 2rem;
+        
+        
+        .blog1{
+            height: auto;
+            width: 400px;
+            border-radius: 6px;
+           
+
+            figure{
+                height: 200px;
+                width: 100%;
+
+                img{
+                    @include image;
+                }
+            }
+            h3{
+                margin-top: 1rem;
+                font-size: 2rem;
+                font-weight: $font_semibold;
+                margin-bottom: 1rem;
+            }
+            p{
+                font-size: 1.6rem;
+                font-weight: $font_regular;
+                text-align: justify;
+                margin-bottom: 2rem;
+                color: $clr_grey_semi;
+            }
+
+            button{
+                height: 35px;
+                width: 160px;
+                border: 1px solid $primary_color;
+                transition: background-color .3s ease-in-out;
+                background-color: $clr_white;
+            a{
+                text-decoration: none;
+                color:$primary_color;
+                font-weight: $font_semibold;
+                font-size: 1.6rem;
+            }
+            &:hover{
+                background-color: $primary_color;
+                cursor: pointer;
+
+                a{
+                    color: $clr_white;
+                }
+            }
+        }
+      
+        }
+
+       
+    }
+}
