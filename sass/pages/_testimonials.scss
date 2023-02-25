@@ -136,7 +136,7 @@
    
     .testimonials{
         .container{
-          
+          padding: 4rem 2rem 4rem 2rem;
             
             .stories{
                 h3{
@@ -160,6 +160,17 @@
                 .slider{
                     grid-template-columns: 1fr;
                     row-gap: 2rem;
+
+                    .card1{
+                        p{
+                            font-size: 1.4rem;
+                        }
+
+                        h5{
+                            font-size: 1.6rem;
+                        }
+
+                    }
                 }
             }
         }
