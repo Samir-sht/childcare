@@ -1,156 +1,164 @@
-footer {
-  .container {
-    @include grid("2fr 1fr", " ");
+footer{
+    .container{
+    @include grid('2fr 1fr',' ');
     align-self: center;
     justify-self: center;
     margin: 0 4rem;
     padding: 3rem 3rem 0 3rem;
     border-bottom: 2px solid #9c9c9c;
-    .links-items {
-      @include css-flexbox(center, center);
+    .links-items{
+      @include css-flexbox(center,center);
       flex-direction: column;
+        
+        .links{
+            @include grid('0.5fr 2fr',' ');
+            
+            margin-bottom: 2rem;
+            width: 100%;
+            position: relative;
 
-      .links {
-        @include grid("0.5fr 2fr", " ");
+            h2{
+                font-size: 1.6rem;
+                font-weight: $font_medium;
+                text-transform: uppercase;
+                display: block
+               
+            }
 
-        margin-bottom: 2rem;
-        width: 100%;
-        position: relative;
+            ul{
+               
+                @include css-flexbox(flex-start,center);
+                list-style: none;
+                border-left: 2px solid $clr_grey_dark;
 
-        h2 {
-          font-size: 1.6rem;
-          font-weight: $font_medium;
-          text-transform: uppercase;
-          display: block;
+                li{
+                    display: block;
+                    font-size: 1.6rem;
+                    font-weight: $font_regular;
+                    text-transform: capitalize;
+                    color: $clr_grey_dark;
+                    padding-left: 2rem;
+                }
+            }
+           
         }
-
-        ul {
-          @include css-flexbox(flex-start, center);
-          list-style: none;
-          border-left: 2px solid $clr_grey_dark;
-
-          li {
-            display: block;
+    }
+    .site-visit{
+        @include css-flexbox(center,center);
+        flex-direction: column;
+        
+        h4{
+            text-transform: uppercase;
+            text-align: center;
             font-size: 1.6rem;
+            font-weight: $font_medium;
+            color: $secondary_color;
+            margin-bottom: 1rem;
+        }
+        p{
+            font-size: 2.4rem;
             font-weight: $font_regular;
-            text-transform: capitalize;
             color: $clr_grey_dark;
-            padding-left: 2rem;
-          }
+            text-align: center;
         }
-      }
     }
-    .site-visit {
-      @include css-flexbox(center, center);
-      flex-direction: column;
-
-      h4 {
-        text-transform: uppercase;
-        text-align: center;
-        font-size: 1.6rem;
-        font-weight: $font_medium;
-        color: $secondary_color;
-        margin-bottom: 1rem;
-      }
-      p {
-        font-size: 2.4rem;
-        font-weight: $font_regular;
-        color: $clr_grey_dark;
-        text-align: center;
-      }
     }
-  }
 
-  .contact-details {
-    padding: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5rem;
+    .contact-details{
+        padding: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
 
-    .contact {
-      display: block;
-      text-align: center;
-      color: $clr_grey_dark;
-      figure {
-        margin-bottom: 1rem;
-        i {
-          font-size: 2.4rem;
+        .contact{
+            display: block;
+            text-align: center;
+            color: $clr_grey_dark;
+            figure{
+                margin-bottom: 1rem;
+             i{
+                font-size: 2.4rem;
+             }
+            }
+             h3{
+                font-size: 1.2rem;
+                font-weight: $font_semibold;
+                margin-bottom: 0.5rem;
+             }
+
+             p{
+                font-size: 1.2rem;
+                font-weight: $font_semibold;
+                font-weight: $font_regular;
+                text-transform: capitalize;
+             }
+            }
         }
-      }
-      h3 {
-        font-size: 1.2rem;
-        font-weight: $font_semibold;
-        margin-bottom: 0.5rem;
-      }
 
-      p {
-        font-size: 1.2rem;
-        font-weight: $font_semibold;
-        font-weight: $font_regular;
-        text-transform: capitalize;
-      }
+        h2.copyright{
+            font-size: 1.2rem;
+            padding: 1.6rem;
+            font-weight: $font_medium;
+          
+            color: $clr_white;
+            text-align: center;
+            background-color: $primary_color;
+        }
     }
-  }
 
-  h2.copyright {
-    font-size: 1.2rem;
-    padding: 1.6rem;
-    font-weight: $font_medium;
-
-    color: $clr_white;
-    text-align: center;
-    background-color: $primary_color;
-  }
-}
 
 //media query
 @media only screen and (max-width: 850px) {
-  footer {
-    .container {
-      @include grid("1fr", " ");
-      gap: 2rem;
+    footer{
+        .container{
+            @include grid('1fr',' ');
+            gap: 2rem;
+        }
     }
-  }
 }
 
 @media only screen and (max-width: 850px) {
-  footer {
-    .container {
-      margin: 0;
-      padding: 3rem;
+    footer{
+       .container{
+        margin: 0;
+        padding:3rem;
 
-      .links-items {
-        .links {
-          grid-template-columns: 1fr;
-          h2 {
-            font-size: 1.4rem;
-            margin-bottom: 0.8rem;
-          }
-          ul {
-            border: none;
-            li {
-              font-size: 1.4rem;
-              padding-left: 0;
-              margin-right: 1rem;
+        .links-items{
+            .links{
+                grid-template-columns: 1fr;
+                    h2{
+                        font-size: 1.4rem;
+                        margin-bottom: 0.8rem;
+                    }
+                    ul{
+                        border: none;
+                        li{
+                            font-size: 1.4rem;
+                            padding-left: 0;
+                            margin-right: 1rem;
+                        }
+                    }
+                }
             }
-          }
-        }
-      }
 
-      .site-visit {
-        h4 {
-          font-size: 1.4rem;
-          margin-bottom: 0.8rem;
+            .site-visit{
+                h4{
+                    font-size: 1.4rem;
+                    margin-bottom: 0.8rem;
+                }
+                p{
+                    font-size: 1.8rem;
+                }
+            }
+      
         }
-        p {
-          font-size: 1.8rem;
-        }
-      }
-    }
-  }
 
-  .contact-details {
-    flex-direction: column;
-  }
+        
+       }
+
+       .contact-details{
+            flex-direction: column;
+       }
+    
 }

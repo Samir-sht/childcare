@@ -1,331 +1,391 @@
-header {
-  width: 100%;
-
-  nav {
-    @include css-flexbox(space-between, center);
-    height: 100px;
+header{
     width: 100%;
-    padding: 0 8rem;
-    z-index: 100;
-    position: fixed;
-    transition: all 0.8s ease-in-out;
-
-    .logo {
-      color: $clr_white;
-      width: 20%;
-
-      img {
-        height: 80px;
-        width: 80px;
-      }
-      h2 {
-        font-size: 2.4rem;
-        a {
-          text-decoration: none;
-          color: $clr_white;
-        }
-      }
-    }
-
-    ul.nav-links {
-      @include css-flexbox(flex-end, center);
-      width: 80%;
-      line-height: 6rem;
-
-      li.items {
-        list-style: none;
-        position: relative;
-        margin-left: 6rem;
-
-        a {
-          text-transform: uppercase;
-          text-decoration: none;
-          text-align: center;
-          color: $clr_white;
-          font-size: 1.6rem;
-          font-weight: $font_medium;
-          display: block;
-          width: 100%;
-          transition: opacity 0.3s ease;
-
-          span {
-            .fa-solid {
-              margin-left: 0.5rem;
-            }
-          }
-
-          &:hover {
-            opacity: 0.5;
-            cursor: pointer;
-          }
-        }
-
-        ul.sub-menu {
-          position: absolute;
-          display: none;
-          z-index: 20;
-          line-height: normal;
-          min-width: 150px;
-          padding: 3px 5px;
-          background-color: $clr_white;
-          padding: 0.3rem 0.5rem;
-
-          li {
-            margin: 0;
-            padding: 1rem 2rem;
-            list-style: none;
-
-            a {
-              text-align: left;
-              font-size: 1.4rem;
-              font-weight: $font_regular;
-              color: $clr_black;
-            }
-          }
-        }
-      }
-
-      li.items:hover ul.sub-menu {
-        display: block;
-      }
-    }
-
-    .hamburger {
-      display: none;
-
-      i {
-        font-size: 2rem;
-        color: $clr_white;
-      }
-    }
-  }
-
-  .swiper {
-    //   position: absolute;
-    height: 100vh;
-    width: 100%;
-
-    .swiper-slide {
-      .bg-shadow {
-        figure {
-          display: flex;
-          align-items: center;
-          height: 100%;
-          width: 100%;
-          background: rgba(0, 0, 0, 0.3);
-          position: relative;
-
-          img {
-            @include image;
-            mix-blend-mode: overlay;
-          }
-        }
-        .overlay {
-          position: absolute;
-          display: flex;
-          align-items: center;
-          top: 0%;
-          left: 0%;
-          height: 100vh;
-          width: 100%;
-          margin: 0 10rem;
-        }
-        .content {
-          margin: 0 5rem;
-          display: block;
-          max-width: 40%;
-          color: $clr_white;
-
-          h2 {
-            font-size: 3.2rem;
-            margin-bottom: 1rem;
-          }
-
-          p {
-            font-size: 1.6rem;
-            margin-bottom: 1.6rem;
-          }
-          button {
-            display: block;
-            height: 40px;
-            width: 200px;
-            background-color: $primary_color;
-            border: none;
-            outline: none;
-            transition: border-radius 0.4s linear;
-
-            a {
-              text-decoration: none;
-              text-transform: capitalize;
-              font-size: 1.6rem;
-              color: $clr_white;
-              text-align: center;
-              letter-spacing: 2px;
-            }
-
-            &:hover {
-              border-radius: 2rem;
-              cursor: pointer;
-            }
-          }
-        }
-      }
-    }
-  }
-  .sticky {
-    background-color: $clr_white;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    transition: all 0.8s linear;
-    height: 70px;
-
-    .logo {
-      a {
-        color: $clr_black;
-      }
-    }
-
-    ul.nav-links {
-      li.items {
-        a {
-          color: $clr_black;
-        }
-      }
-    }
-  }
-}
-
-//mediaquery
-@media only screen and (max-width: 850px) {
-  header {
-    nav {
-      padding: 0 4rem;
-
-      ul {
-        transition: all 0.4s ease-in-out;
-      }
-      ul.nav-links {
-        display: block;
+    
+    nav{
+        @include css-flexbox(space-between,center);
+        height:100px;
         width: 100%;
+        padding: 0 8rem;
+        z-index: 100;
         position: fixed;
-        top: 12%;
-        right: 0;
-        right: -100%;
-        background-color: $clr_white;
-        z-index: 99;
-        text-align: left;
-
-        li.items {
-          display: block;
-
-          a {
-            text-align: right;
-            color: $clr_black;
-            padding-right: 2rem;
-          }
+        transition: all .8s ease-in-out;
+   
+        
+        .logo{
+          color: $clr_white;
+            width: 20%;
+            
+            img{
+               height: 80px;
+               width: 80px
+            }
+            h2{
+                font-size: 2.4rem;
+                a{
+                    text-decoration: none;
+                    color: $clr_white
+                }
+            }
         }
 
-        ul.sub-menu {
-          //    display: block !important;
-          text-align: right;
-          position: relative !important;
-          // z-index: 0;
-          li {
-            a {
-              text-align: right !important;
-              color: $clr_black;
-              padding-right: 2rem;
+        ul.nav-links{
+          
+            @include css-flexbox(flex-end,center);
+           width: 80%;
+           line-height: 6rem;
+          
+            
+            li.items{
+               
+                list-style: none;
+                position: relative;
+                margin-left: 6rem;
+                
+               
+                a{
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    text-align: center;
+                    color: $clr_white;
+                    font-size: 1.6rem;
+                    font-weight: $font_medium;
+                    display: block;
+                    width: 100%;
+                    transition: opacity .3s ease;
+
+                    span{
+                        .fa-solid{
+                        margin-left: 0.5rem;
+                       }
+                    }
+
+                    &:hover{
+                        opacity: 0.5;
+                        cursor: pointer;
+                    }
+                }
+                
+                ul.sub-menu{
+                    position: absolute;
+                    display: none;
+                    z-index: 20;
+                    line-height: normal;
+                    min-width: 150px;
+                    padding:3px 5px;
+                    background-color: $clr_white;
+                    padding:0.3rem 0.5rem;
+                    
+                    
+
+                    li{
+                        margin: 0;
+                        padding: 1rem 2rem ; 
+                        list-style: none;
+
+                        a{
+                            
+                            text-align: left;
+                            font-size: 1.4rem;
+                            font-weight: $font_regular;
+                            color: $clr_black;
+                            
+
+                        }
+
+                    }
+                    }
+                }
+
+                li.items:hover ul.sub-menu{
+                    display: block;
+                }
+   
+            }
+
+            .hamburger{
+                display: none;
+
+                i{
+                    font-size: 2rem;
+                    color:$clr_white;
+                }
+            }
+
+            
+            
+            
+        }
+
+        
+        .swiper {
+        //   position: absolute;
+          height: 100vh;
+          width: 100%;
+
+          .swiper-slide{
+            
+            .bg-shadow{
+            
+            figure{
+                display: flex;
+                align-items: center;
+                height: 100%;
+                width: 100%;
+                background: rgba(0,0,0,0.3);
+                position: relative;
+                
+                img{
+                    @include image;
+                    mix-blend-mode: overlay;
+                }
+
+    
+                }
+                .overlay{
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    top: 0%;
+                    left: 0%;
+                    height: 100vh;
+                    width: 100%;
+                    margin: 0 10rem;
+                }
+                .content{
+                 
+                    margin: 0 5rem;
+                    display: block;
+                    max-width: 40%;
+                    color: $clr_white;
+                    
+                    h2{
+                        font-size: 3.2rem;
+                        margin-bottom: 1rem;
+                    }
+
+                    p{
+                        font-size: 1.6rem;
+                        margin-bottom: 1.6rem;
+                        
+                    }
+                    button{
+                        display: block;
+                        height:40px ;
+                        width: 200px;
+                        background-color: $primary_color;
+                        border: none;
+                        outline: none;
+                        transition:border-radius .4s linear;
+                      
+
+                        a{
+                            text-decoration: none;
+                            text-transform: capitalize;
+                            font-size: 1.6rem;
+                            color: $clr_white;
+                            text-align: center;
+                            letter-spacing: 2px;
+                        }
+
+                        &:hover{
+                            border-radius: 2rem;
+                            cursor: pointer;
+                        }
+                    }
+                }
+    
+
+          }
+
+         
+          
+          }
+         
+          }
+          .sticky{
+            background-color: $clr_white;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            transition: all .8s linear;
+            height: 70px;
+
+            .logo{
+                a{
+                color: $clr_black;
+                }
+            }
+
+            ul.nav-links{
+                
+                li.items{
+                    a{
+                        color: $clr_black;
+                    }
+
+                    
+                }
             }
           }
 
-          li:hover ul.show {
+          
+           
+    }
+
+    
+ //mediaquery
+    @media only screen and (max-width: 850px) {
+  header{
+    nav{
+        padding: 0 4rem;
+        
+        
+        ul{
+            transition: all .4s ease-in-out ;
+            
+        }
+        ul.nav-links{
+           
+           display: block;
+            width: 100%;
+            position: fixed;
+            top: 12%;
+            right: 0;
+            right: -100%;
+            background-color: $clr_white;
+            z-index: 99;
+            text-align: left;
+            
+
+            li.items{
+                display: block;
+
+                a{
+                    text-align: right;
+                    color: $clr_black;
+                    padding-right: 2rem;
+                }
+            }
+
+            ul.sub-menu{
+            //    display: block !important;
+                text-align: right;
+                position: relative !important;
+                // z-index: 0;
+                li{
+                a{
+                    text-align: right !important;
+                    color: $clr_black;
+                    padding-right: 2rem;
+                }
+            }
+
+            li:hover ul.show{
+               display: block;
+            }
+            }
+
+            ul .show{
+                display: block !important;
+            }
+            
+
+          
+
+          
+
+        }
+        ul.active{
+            right: 0;
+        }
+
+       
+
+        
+
+        .logo {
+            h2{
+                font-size: 2rem;
+            }
+        }
+        .hamburger{
             display: block;
-          }
-        }
-
-        ul .show {
-          display: block !important;
-        }
-      }
-      ul.active {
-        right: 0;
-      }
-
-      .logo {
-        h2 {
-          font-size: 2rem;
-        }
-      }
-      .hamburger {
-        display: block;
-      }
-    }
-    .sticky {
-      .hamburger {
-        i {
-          color: $clr_black;
-        }
-      }
+           
     }
 
-    .swiper {
-      height: auto;
-      .swiper-slide {
-        .bg-shadow {
-          .overlay {
-            margin: 0;
-            height: 90vh;
-          }
-          .content {
-            max-width: 100%;
-
-            h2 {
-              font-size: 2.4rem;
-            }
-          }
-        }
-      }
-    }
+    
   }
+  .sticky{
+    .hamburger{
+        i{
+            color:$clr_black;
+        }
+    }
 }
 
-@media only screen and (max-width: 650px) {
-  header {
-    nav {
-      padding: 0 2rem;
+.swiper {
+    height: auto;
+    .swiper-slide{ 
+        .bg-shadow{
+             .overlay{
+                margin: 0;
+                height: 90vh;
+             }
+             .content{
+                max-width: 100%;
 
-      .logo {
-        width: auto;
-      }
-    }
-
-    .swiper {
-      height: 100vh;
-      .swiper-slide {
-        .bg-shadow {
-          height: 100vh;
-          .overlay {
-            margin: 0;
-            height: 100vh;
-          }
-          .content {
-            max-width: 100%;
-
-            h2 {
-              font-size: 2rem;
-            }
-            p {
-              font-size: 1.4rem;
-            }
-            button {
-              width: 150px;
-
-              a {
-                font-size: 1.4rem;
-              }
-            }
-          }
+                h2{
+                    font-size: 2.4rem;
+                }
+               
+             }
         }
-      }
     }
-  }
+}
+}
+}
+
+@media only screen and (max-width:650px){
+    header{
+        nav{
+            padding: 0 2rem;
+            
+            .logo {
+              width: auto;
+
+            }
+          
+        
+      }
+    
+    
+    .swiper {
+        height: 100vh;
+        .swiper-slide{ 
+            .bg-shadow{
+                height: 100vh;
+                 .overlay{
+                    margin: 0;
+                    height: 100vh;
+                 }
+                 .content{
+                    max-width: 100%;
+    
+                    h2{
+                        font-size: 2rem;
+                    }
+                    p{
+                        font-size: 1.4rem;
+                    }
+                    button{
+                        width: 150px;
+
+                        a{
+                            font-size: 1.4rem;
+                        }
+                    }
+                   
+                 }
+            }
+        }
+    }
+    }
 }

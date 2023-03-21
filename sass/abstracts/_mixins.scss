@@ -1,20 +1,20 @@
 // flexbox
-@mixin css-flexbox($justify, $align) {
-  display: flex;
-  justify-content: #{$justify};
-  align-items: #{$align};
-}
+@mixin css-flexbox($justify,$align){
+    display: flex;
+    justify-content: #{$justify};
+    align-items: #{$align};
+} 
 
 //grid
 
-@mixin grid($column, $row) {
-  display: grid;
-  grid-template-columns: #{$column};
-  grid-template-rows: #{$row};
+@mixin grid($column,$row) {
+    display: grid;
+    grid-template-columns: #{$column};
+    grid-template-rows: #{$row};
 }
 
-@mixin image {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+@mixin image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
