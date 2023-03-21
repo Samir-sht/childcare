@@ -1,27 +1,23 @@
-
-@import './abstracts/variables';
-@import './abstracts/mixins';
-@import './layout/header';
-@import './layout/footer';
-@import './pages/about';
-@import './pages/work';
-@import './pages/blog';
-@import './pages/testimonials';
-@import './pages/newsletter';
-
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+@import "./layout/header";
+@import "./layout/footer";
+@import "./pages/about";
+@import "./pages/work";
+@import "./pages/blog";
+@import "./pages/testimonials";
+@import "./pages/newsletter";
 
 
-
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
-html{
-    /*1rem =10px*/
-    font-size: 62.5%;
+html {
+  /*1rem =10px*/
+  font-size: 62.5%;
 }
